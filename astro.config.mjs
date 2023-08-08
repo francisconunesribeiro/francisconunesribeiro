@@ -7,8 +7,11 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	site: 'https://francisconunesribeiro.com',
 	integrations: [mdx(), sitemap(), tailwind()],
 	output: "server",
-	adapter: cloudflare({ mode: 'directory' })
+	adapter: cloudflare({ mode: 'directory' }),
+	experimental: {
+		viewTransitions: true
+	}
 });
